@@ -18,6 +18,7 @@ class Triangle
     array << @length_two == @length_three
     array << @length_one == @length_three
     array.each do |condition|
+      binding.pry
       if condition == true
         equal_length_count += 1
       end
