@@ -14,6 +14,7 @@ class Triangle
     equal_length_count = 0
     if @length_one == @length_two
       equal_length_count += 1
+    end
 
     if fail_inequality == true || greater_than_zero == false
       raise TriangleError
