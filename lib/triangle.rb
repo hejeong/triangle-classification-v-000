@@ -22,6 +22,7 @@ class Triangle
         equal_length_count += 1
       end
     end
+    binding.pry
 
     if fail_inequality == true || greater_than_zero == false
       raise TriangleError
