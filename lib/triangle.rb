@@ -21,13 +21,17 @@ class Triangle
         equal_length_count += 1
       end
     end
+
     if fail_inequality == true || greater_than_zero == false
       raise TriangleError
     else
       case equal_length_count
       when 0
+        :scalene
       when 1
+        :isosceles
       when 3
+        :equilateral
       end
     end
   end
