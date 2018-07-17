@@ -12,10 +12,15 @@ class Triangle
     fail_inequality = (@length_one + @length_two < @length_three) || (@length_one + @length_three < @length_two)  || (@length_two + @length_three < @length_one)
     greater_than_zero = (@length_one > 0) && (@length_two > 0) && (@length_three > 0)
     equal_length_count = 0
-    if @length_one == @length_two
-      equal_length_count += 1
+    array = []
+    array << @length_one == @length_two
+    array << @length_two == @length_three
+    array << @length_one == @length_three
+    array.each do |condition| 
+      if condition == true
+        equal_length_count += 1
+      end 
     end
-
     if fail_inequality == true || greater_than_zero == false
       raise TriangleError
     else
