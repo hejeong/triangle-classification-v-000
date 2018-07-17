@@ -9,11 +9,11 @@ class Triangle
 
   def kind
     # Check for triangle inequality
-    inequality = (@length_one + @length_two < @length_three) || (@length_one + @length_three < @length_two)  || (@length_two + @length_three < @length_one)
-
+    fail_inequality = (@length_one + @length_two < @length_three) || (@length_one + @length_three < @length_two)  || (@length_two + @length_three < @length_one)
+    greater_than_zero = (@length )
     if inequality == true
       raise TriangleError
-    end
+    elsif
 
   end
 
