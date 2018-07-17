@@ -16,17 +16,17 @@ class Triangle
     array << @length_one == @length_two
     array << @length_two == @length_three
     array << @length_one == @length_three
-    array.each do |condition| 
+    array.each do |condition|
       if condition == true
         equal_length_count += 1
-      end 
+      end
     end
     if fail_inequality == true || greater_than_zero == false
       raise TriangleError
     else
       case equal_length_count
       when 0
-      when 2
+      when 1
       when 3
       end
     end
